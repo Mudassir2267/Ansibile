@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: yes
+  become: no
   vars: 
      dockerceversion: 5:18.09.9~3-0~ubuntu-bionic
      dockercecliversion: 5:18.09.9~3-0~ubuntu-bionic
