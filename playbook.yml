@@ -1,7 +1,9 @@
 ---
-- hosts: all
-  become: no
+- hosts: 172.31.4.185
+  become: yes
   vars: 
+     ansible_user: edureka
+     ansible_password: DevOps12  
      dockerceversion: 5:18.09.9~3-0~ubuntu-bionic
      dockercecliversion: 5:18.09.9~3-0~ubuntu-bionic
      containerdioversion: 1.2.6-3
