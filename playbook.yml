@@ -20,9 +20,11 @@
     - name: Add Docker APT repository
       apt_repository:
           repo: deb [arch=amd64] https://download.docker.com/linux/{{ansible_distribution|lower}} {{ansible_distribution_release}} stable
+      ignore_errors: yes
     - name: Install Docker packages
       apt:
 #        name: "{{ item }}" 
         name: ['docker-ce={{ dockerceversion }}','docker-ce-cli={{ dockercecliversion }}', 'containerd.io={{ containerdioversion }}']
         state: present
+      ignore_errors: yes
 
